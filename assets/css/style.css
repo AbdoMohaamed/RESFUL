@@ -6557,7 +6557,7 @@ header.style-4 .main-menu > ul > li ul.sub-menu {
   border: 1px solid var(--borders-color);
   border-radius: 10px;
   padding: 15px 0;
-  text-align: left;
+  text-align: right;
   transform-origin: top;
 }
 @media (max-width: 1199px) {
@@ -6573,7 +6573,8 @@ header.style-4 .main-menu > ul > li ul.sub-menu > li {
 header.style-4 .main-menu > ul > li ul.sub-menu > li i {
   position: absolute;
   top: 14px;
-  right: 20px;
+  left : 20px !important;
+  right:unset !important;
   display: block;
   color: var(--title-color);
   font-size: 14px;
@@ -6647,7 +6648,7 @@ header.style-4 .main-menu > ul > li ul.sub-menu > li.active .dropdown-icon {
   color: var(--primary-color3);
 }
 header.style-4 .main-menu > ul > li ul.sub-menu > li .sub-menu {
-  left: 220px;
+  right: 220px;
   position: absolute;
   max-width: 230px;
   min-width: 215px;
@@ -7331,7 +7332,7 @@ header.style-4 .main-menu > ul > li.menu-item-has-children > a::before {
   content: "\f229";
   font-family: "bootstrap-icons";
   position: absolute;
-  right: 8px;
+  left: -2px;
   top: 53%;
   transform: translateY(-50%);
   font-size: 10px;
@@ -7340,7 +7341,7 @@ header.style-4 .main-menu > ul > li.menu-item-has-children > a::before {
 }
 @media (min-width: 1200px) and (max-width: 1399px) {
   header.style-4 .main-menu > ul > li.menu-item-has-children > a::before {
-    right: 2px;
+    left: 4px;
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -26006,7 +26007,7 @@ header.style-7 .primary-btn3.four svg {
   content: "";
   position: absolute;
   top: 0;
-  left: 40px;
+  right: 40px;
   width: 426px;
   height: 466px;
   border-radius: 14px;
@@ -26188,7 +26189,7 @@ header.style-7 .primary-btn3.four svg {
 }
 .home6-process-section .process-wrapper .process-btn-area a:hover svg {
   stroke: var(--primary-color3);
-  transform: rotate(45deg);
+  transform:scale(-1);
 }
 
 /*=====================================
