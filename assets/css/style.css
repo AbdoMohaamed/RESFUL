@@ -1,4 +1,4 @@
-/*===========================
+﻿/*===========================
 Project Name: Mortar - IT Startup & Digital Agency Template.
 Author: Egens Lab --> (https://www.egenslab.com/)
 Support: https://www.account.egenslab.com/
@@ -113,33 +113,38 @@ Version: 1.0
 }
 
 :root {
-  --font-lora: "Lora", sans-serif;
-  --font-dmsans: "DM Sans", sans-serif;
-  --font-suse: "SUSE", sans-serif;
-  --white-color: #fff;
-  --dark-white-color: #fff;
-  --dark-black-color: #1C1A1E;
-  --black-color: #1C1A1E;
-  --black-color-opc: 28, 26, 30;
-  --title-color: #1C1A1E;
-  --dark-title-color: #1C1A1E;
-  --title-color-opc: 28, 26, 30;
-  --title-color2: #003C30;
-  --dark-title-color2: #003C30;
-  --dark-text-color: #A0A0A0;
-  --text-color: #545454;
-  --global-text-color: #545454;
-  --text-color-opc: 84, 84, 84;
-  --primary-color1: #5841D8;
-  --primary-color1-opc: 88, 65, 216;
-  --primary-color2: #78EB54;
-  --primary-color2-opc: 120, 235, 84;
-  --secondary-color: #003C30;
-  --primary-color3: #5956E9;
-  --primary-color3-opc: 89, 86, 233;
-  --primary-color4: #60E59D;
-  --primary-color4-opc: 96, 229, 157;
-  --borders-color: #eee;
+    --font-lora: "Lora", sans-serif;
+    --font-dmsans: "DM Sans", sans-serif;
+    --font-suse: "SUSE", sans-serif;
+    --white-color: #fff;
+    --dark-white-color: #fff;
+    --dark-black-color: #1C1A1E;
+    --black-color: #1C1A1E;
+    --black-color-opc: 28, 26, 30;
+    --title-color: #1C1A1E;
+    --dark-title-color: #1C1A1E;
+    --title-color-opc: 28, 26, 30;
+    --title-color2: #003C30;
+    --dark-title-color2: #003C30;
+    --dark-text-color: #A0A0A0;
+    --text-color: #545454;
+    --global-text-color: #545454;
+    --text-color-opc: 84, 84, 84;
+    --primary-color: #5259FF;
+    --primary-color1: #5841D8;
+    --primary-color1-opc: 88, 65, 216;
+    --primary-color2: #78EB54;
+    --primary-color2-opc: 120, 235, 84;
+    --secondary-color: #003C30;
+    --primary-color3: #5956E9;
+    --primary-color3-opc: 89, 86, 233;
+    --primary-color4: #60E59D;
+    --white-color: #fff;
+    --primary-color4-opc: 96, 229, 157;
+    --borders-color: #eee;
+    --btn-plure: #2a2f4d;
+    --border-gray: #494f69;
+    --orange: #FE674C;
 }
 
 body.dark {
@@ -1104,22 +1109,22 @@ body.tt-magic-cursor #magic-cursor {
 }
 
 .primary-btn2 {
-  border-radius: 10px;
-  background-color: var(--primary-color2);
-  font-family: var(--font-dmsans);
-  font-weight: 700;
-  font-size: 16px;
-  color: var(--dark-title-color);
-  letter-spacing: 0.48px;
-  line-height: 1;
-  padding: 16px 26px;
-  position: relative;
-  align-items: center;
-  display: inline-flex;
-  transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  overflow: hidden;
-  z-index: 1;
-  white-space: nowrap;
+    font-family: var(--font-dmsans);
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--dark-title-color);
+    letter-spacing: 0.48px;
+    line-height: 1;
+    padding: 16px 26px;
+    position: relative;
+    align-items: center;
+    background-color:var(--orange);
+    display: inline-flex;
+    transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    overflow: hidden;
+    z-index: 1;
+    white-space: nowrap;
+    border-radius: 50px;
 }
 @media (max-width: 576px) {
   .primary-btn2 {
@@ -1215,20 +1220,18 @@ body.tt-magic-cursor #magic-cursor {
   stroke: var(--dark-title-color);
 }
 .primary-btn2.transparent {
-  border: 1px solid var(--borders-color);
-  background-color: transparent;
-  color: var(--title-color);
-  padding: 15px 26px;
+    background-color:var(--orange);
+    color: var(--white-color);
+    padding: 15px 26px;
 }
+    .primary-btn2.transparent::after {
+        background: var(--white-color);
+    }
 .primary-btn2.transparent svg {
-  stroke: var(--title-color);
-}
-.primary-btn2.transparent::after {
-  background-color: var(--primary-color2);
+  stroke: var(--white-color);
 }
 .primary-btn2.transparent:hover {
   color: var(--dark-title-color);
-  border-color: var(--primary-color2);
 }
 .primary-btn2.transparent:hover svg {
   stroke: var(--dark-title-color);
@@ -1355,39 +1358,84 @@ body.tt-magic-cursor #magic-cursor {
     align-items: center;
     white-space: nowrap;
     transition: 0.45s;
+    gap:3px;
     position: relative;
 }
-.primary-btn4 .content {
-  color: var(--white-color);
-  font-family: var(--font-dmsans);
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1;
-  background-color: var(--primary-color3);
-  border-radius: 24px;
-  padding: 12px 18px;
-  position: relative;
-  z-index: 1;
-  display: inline-block;
-  transform-style: preserve-3d;
-  transition: 0.45s;
+    .primary-btn4 .content {
+        color: var(--white-color);
+        font-family: var(--font-dmsans);
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1;
+        background-color: var(--btn-plure);
+        border-radius: 24px;
+        padding: 12px 18px;
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+        transform-style: preserve-3d;
+        transition: 0.45s;
+        border: 1px solid var(--border-gray);
+    }
+    .primary-btn4 .contact-btn {
+        color: var(--white-color);
+        font-family: var(--font-dmsans);
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1;
+        background: transparent;
+        border-radius: 24px;
+        padding: 12px 18px;
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+        transform-style: preserve-3d;
+        transition: 0.45s;
+        border: 1px solid var(--border-gray);
+    }
+
+    .contact-btn::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 12px;
+        padding: 2px;
+        background: linear-gradient( 90deg, #19c1ff, #fe674c, #5259ff );
+        -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        z-index: -1;
+    }
+
+    .contact-btn::after {
+        content: "";
+        position: absolute;
+        border-radius: 14px;
+        background: linear-gradient(90deg, #19c1ff, #fe674c, #5259ff);
+        filter: blur(12px);
+        opacity: 0.5;
+        z-index: -2;
+    }
+.primary-btn4:hover .contact-btn {
+    transform: translate3d(40px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
 }
-.primary-btn4 .icon {
-  min-width: 40px;
-  max-width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: var(--primary-color3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.45s;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-}
+    .primary-btn4 .icon {
+        min-width: 50px;
+        max-width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.45s;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -15px;
+    }
     .primary-btn4 .icon svg {
         fill: none;
         stroke: var(--white-color);
@@ -1417,7 +1465,7 @@ body.tt-magic-cursor #magic-cursor {
   color: var(--dark-white-color);
 }
 .primary-btn4.black-bg .icon {
-  background-color: var(--black-color);
+  background-color: transparent;
 }
 .primary-btn4.black-bg .icon svg {
   stroke: var(--dark-white-color);
@@ -1638,24 +1686,26 @@ body.tt-magic-cursor #magic-cursor {
 }
 
 .section-title > span {
-  color: var(--title-color);
-  font-family: var(--font-dmsans);
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1;
-  padding: 5px 16px;
-  display: inline-block;
-  border: 1px solid var(--primary-color1);
-  border-radius: 100px;
-  margin-bottom: 15px;
+    color: var(--white-color);
+    font-family: var(--font-dmsans);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+    padding: 10px 16px;
+    border-radius: 100px;
+    display: inline-block;
+    margin-bottom: 15px;
+    border: 2px solid transparent;
+    background: linear-gradient(var(--btn-plure), var(--btn-plure)) padding-box, linear-gradient(90deg, #fe8f58, #fe6a4d, #34c6f6, #3e7eff, #4f68ff) border-box;
 }
+
 .section-title h2 {
-  color: var(--title-color);
-  font-family: var(--font-lora);
-  font-size: 45px;
-  font-weight: 600;
-  line-height: 1.2;
-  margin-bottom: 0;
+    color: var(--white-color);
+    font-family: var(--font-lora);
+    font-size: 45px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 0;
 }
 @media (max-width: 1199px) {
   .section-title h2 {
@@ -1668,13 +1718,13 @@ body.tt-magic-cursor #magic-cursor {
   }
 }
 .section-title p {
-  color: var(--text-color);
-  font-family: var(--font-dmsans);
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 28px;
-  margin-bottom: 0;
-  padding-top: 20px;
+    color: var(--white-color);
+    font-family: var(--font-dmsans);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    margin-bottom: 0;
+    padding-top: 20px;
 }
 @media (max-width: 991px) {
   .section-title p {
@@ -1699,7 +1749,6 @@ body.tt-magic-cursor #magic-cursor {
 }
 .section-title.two > span {
   font-weight: 700;
-  border-color: var(--borders-color);
 }
 .section-title.three > span {
   font-weight: 700;
@@ -1771,6 +1820,7 @@ body.tt-magic-cursor #magic-cursor {
   font-family: var(--font-suse);
   font-size: 55px;
   font-weight: 700;
+  padding-top:35px;
 }
 @media (max-width: 1399px) {
   .section-title.four h2 {
@@ -1789,7 +1839,7 @@ body.tt-magic-cursor #magic-cursor {
 }
 
 .section-title2 h2 {
-  color: var(--title-color);
+  color: var(--white-color);
   font-family: var(--font-suse);
   font-size: 55px;
   font-weight: 600;
@@ -2135,8 +2185,12 @@ header.style-1 .company-logo-and-contact-area {
   align-items: center;
   gap: 30px;
 }
-@media (max-width: 1399px) {
-  header.style-1 .company-logo-and-contact-area {
+.company-logo .img-fluid {
+    width: auto; 
+    height: 50px !important;
+}
+    @media (max-width: 1399px) {
+        header .style-1 .company-logo-and-contact-area {
     gap: 20px;
   }
 }
@@ -6254,14 +6308,18 @@ header.style-4 {
   }
 }
 header.style-4.sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  box-sizing: border-box;
-  background-color: var(--dark-white-color);
-  box-shadow: 5px 3px 40px rgba(0, 72, 88, 0.1);
-  z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 999;
+    background: rgba(10, 15, 40, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+    transition: all 0.4s ease;
 }
 @keyframes smooth-header {
   0% {
@@ -6314,7 +6372,7 @@ header.style-4 .contact-area .icon {
   }
 }
 header.style-4 .contact-area .content span {
-  color: var(--text-color);
+  color: var(--white-color);
   font-family: var(--font-dmsans);
   font-size: 14px;
   font-weight: 600;
@@ -6332,7 +6390,7 @@ header.style-4 .contact-area .content h6 {
   margin-bottom: 0;
 }
 header.style-4 .contact-area .content h6 a {
-  color: var(--title-color);
+  color: var(--white-color);
   font-family: var(--font-suse);
   font-size: 18px;
   font-weight: 700;
@@ -6431,11 +6489,11 @@ header.style-4 .nav-right .mobile-menu-btn {
 header.style-4 .menu-wrap {
   display: flex;
   align-items: center;
-  gap: 70px;
+  gap: 180px;
 }
 @media (max-width: 1699px) {
   header.style-4 .menu-wrap {
-    gap: 50px;
+    gap: 180px;
   }
 }
 @media (max-width: 1399px) {
@@ -6496,15 +6554,15 @@ header.style-4 .main-menu > ul > li:hover i {
   }
 }
 header.style-4 .main-menu > ul > li > a {
-  color: var(--title-color);
+  color: var(--white-color);
   display: block;
   letter-spacing: 0.4px;
   padding: 3px 22px 3px 10px;
   line-height: 1;
   position: relative;
   font-family: var(--font-dmsans);
-  font-weight: 600;
-  font-size: 16px;
+  font-weight: 700;
+  font-size: 18px;
   transition: all 0.5s ease-out 0s;
   position: relative;
   transition: all 0.5s ease-out 0s;
@@ -7336,7 +7394,7 @@ header.style-4 .main-menu > ul > li.menu-item-has-children > a::before {
   top: 53%;
   transform: translateY(-50%);
   font-size: 10px;
-  color: #999999;
+  color: var(--white-color);
   transition: all 0.5s ease-out 0s;
 }
 @media (min-width: 1200px) and (max-width: 1399px) {
@@ -11791,13 +11849,21 @@ header.style-7 .primary-btn3.four svg {
 /*=====================================
   06. Home1 Partner Section CSS
 ========================================*/
-.home1-feature-section .feature-banner-area {
-  background-image: url(../img/home1/home1-feature-banner-bg.png), linear-gradient(180deg, #1C1A1E 0%, #1C1A1E 100%);
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 20px;
-  padding: 80px 40px 115px;
+.home1-feature-section {
+    background-image: url(../img/home/BG-R.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
+    .home1-feature-section .feature-banner-area {
+        background-image: url(../img/home/bg-8.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 20px;
+        padding: 80px 40px 115px;
+        border: 2px solid;
+        border-image: linear-gradient(90deg, #fe8f58, #fe6a4d, #34c6f6, #3e7eff, #4f68ff);
+        border-image-slice: 1;
+    }
 @media (max-width: 991px) {
   .home1-feature-section .feature-banner-area {
     padding: 90px 40px;
@@ -11819,19 +11885,19 @@ header.style-7 .primary-btn3.four svg {
   margin: 0 auto;
   text-align: center;
 }
-.home1-feature-section .feature-banner-area .banner-content span {
-  color: var(--white-color);
-  font-family: var(--font-dmsans);
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1;
-  display: inline-block;
-  padding: 5px 17px;
-  background-color: #2F2F2F;
-  border: 1px solid var(--primary-color1);
-  border-radius: 22px;
-  margin-bottom: 20px;
-}
+    .home1-feature-section .feature-banner-area .banner-content span {
+        color: var(--white-color);
+        font-family: var(--font-dmsans);
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1;
+        display: inline-block;
+        padding:10px 17px;
+        margin-bottom: 20px;
+        border-radius: 22px;
+        border: 1px solid transparent;
+        background: linear-gradient(var(--btn-plure), var(--btn-plure)) padding-box, linear-gradient(90deg, var(--primary-color) 0%, #FFFFFF 35%, #FE674C 100%) border-box;
+    }
 .home1-feature-section .feature-banner-area .banner-content h2 {
   color: var(--white-color);
   font-family: var(--font-lora);
@@ -11884,28 +11950,29 @@ header.style-7 .primary-btn3.four svg {
   }
 }
 .home1-feature-section .feature-card-area .company-icon-and-arrow .company-icon {
-  width: 80px;
-  height: 80px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid transparent;
-  background: linear-gradient(#1C1A1E, #1C1A1E) padding-box, linear-gradient(180deg, var(--primary-color1) 25%, var(--borders-color) 100%) border-box;
-  margin: 0 auto;
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border: 2px solid;
+    border-image: linear-gradient(90deg, #fe8f58, #fe6a4d, #34c6f6, #3e7eff, #4f68ff);
+    border-image-slice: 1;
+    background-color: var(--btn-plure);
 }
-.home1-feature-section .feature-card-area .company-icon-and-arrow .company-icon svg {
-  fill: var(--primary-color1);
-}
+    .home1-feature-section .feature-card-area .company-icon-and-arrow .company-icon svg {
+        fill: var(--orange);
+    }
 .home1-feature-section .feature-card-area .company-icon-and-arrow .arrow {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.home1-feature-section .feature-card-area .company-icon-and-arrow .arrow svg {
-  fill: var(--borders-color);
-  width: 1008px;
-}
+    .home1-feature-section .feature-card-area .company-icon-and-arrow .arrow svg {
+        width: 1008px;
+    }
 @media (max-width: 1399px) {
   .home1-feature-section .feature-card-area .company-icon-and-arrow .arrow svg {
     width: 870px;
@@ -11920,8 +11987,9 @@ header.style-7 .primary-btn3.four svg {
 
 .feature-card {
   padding: 35px 30px;
-  border: 1px solid var(--borders-color);
-  border-radius: 20px;
+    border: 2px solid;
+    border-image: linear-gradient(90deg, #fe8f58, #fe6a4d, #34c6f6, #3e7eff, #4f68ff);
+    border-image-slice: 1;
 }
 @media (min-width: 1200px) and (max-width: 1399px) {
   .feature-card {
@@ -11955,7 +12023,7 @@ header.style-7 .primary-btn3.four svg {
   margin-bottom: 15px;
 }
 .feature-card h3 {
-  color: var(--title-color);
+  color: var(--white-color);
   font-family: var(--font-lora);
   font-size: 28px;
   font-weight: 600;
@@ -11989,7 +12057,7 @@ header.style-7 .primary-btn3.four svg {
   }
 }
 .feature-card p {
-  color: var(--text-color);
+  color: var(--white-color);
   font-family: var(--font-dmsans);
   font-size: 16px;
   font-weight: 500;
@@ -12021,17 +12089,21 @@ header.style-7 .primary-btn3.four svg {
 .feature-card:hover .icon img {
   animation: bounceIn 1s linear;
 }
-.feature-card.two {
-  background-color: #F1F1FF;
+.feature-card.four {
+    background-color: #5259FF;
 }
-.feature-card.two .icon {
-  background-color: var(--white-color);
+.feature-card.one  {
+    background-color:var(--btn-plure);
+}
+.feature-card.two {
+  background-color: var(--orange);
 }
 .feature-card.three {
-  background-color: #F0F0F0;
+    background-color: #02072B;
 }
-.feature-card.three .icon {
-  background-color: var(--white-color);
+.feature-card .icon {
+  background-color: transparent;
+  border:1px solid var(--white-color);
 }
 
 .contact-btn-area {
@@ -12040,11 +12112,11 @@ header.style-7 .primary-btn3.four svg {
   justify-content: space-between;
   gap: 15px;
   padding: 14px 15px 14px 30px;
-  border: 1px solid var(--borders-color);
   border-radius: 40px;
   max-width: 544px;
   width: 100%;
   margin: 0 auto;
+  background-color:var(--orange);
 }
 @media (max-width: 576px) {
   .contact-btn-area {
@@ -12055,7 +12127,7 @@ header.style-7 .primary-btn3.four svg {
   }
 }
 .contact-btn-area h6 {
-  color: var(--title-color);
+  color: var(--white-color);
   font-family: var(--font-lora);
   font-size: 18px;
   font-weight: 600;
@@ -12113,14 +12185,17 @@ header.style-7 .primary-btn3.four svg {
 /*=====================================
   07. Home1 Process Section CSS
 ========================================*/
+.home1-process-section {
+    background-image:url(../img/home/bg-6.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+
+}
 .home1-process-section .process-wrapper {
-  background-image: url(../img/home1/home1-process-bg.png), linear-gradient(180deg, #FFF2E5 0%, #FFF2E5 100%);
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 20px;
-  padding: 80px 70px;
-  position: relative;
-  z-index: 1;
+    border-radius: 20px;
+    padding: 80px 70px;
+    position: relative;
+    z-index: 1;
 }
 @media (max-width: 1399px) {
   .home1-process-section .process-wrapper {
@@ -12143,18 +12218,18 @@ header.style-7 .primary-btn3.four svg {
     border-radius: 15px;
   }
 }
-.home1-process-section .process-wrapper::before {
+/*.home1-process-section .process-wrapper::before {
   content: url(../img/home1/home1-process-vector.svg);
   position: absolute;
   top: 15%;
   right: 0;
   z-index: -1;
-}
-@media (max-width: 991px) {
+}*/
+/*@media (max-width: 991px) {
   .home1-process-section .process-wrapper::before {
     display: none;
   }
-}
+}*/
 .home1-process-section .process-wrapper .section-title span {
   background-color: var(--white-color);
 }
@@ -12203,7 +12278,7 @@ header.style-7 .primary-btn3.four svg {
   padding-left: 12px;
 }
 .home1-process-section .process-wrapper .process-slider-area .process-card .step-no-and-icon span {
-  color: var(--title-color);
+  color: var(--white-color);
   font-family: var(--font-lora);
   font-size: 18px;
   font-weight: 700;
@@ -12312,7 +12387,7 @@ header.style-7 .primary-btn3.four svg {
   fill: var(--white-color);
 }
 .home1-process-section .process-wrapper .process-slider-area .process-card .process-content ul li svg circle {
-  fill: #E8E8E8;
+  fill: var(--btn-plure);
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .home1-process-section .process-wrapper .process-slider-area .process-card .process-content ul li {
@@ -12576,7 +12651,7 @@ header.style-7 .primary-btn3.four svg {
   }
 }
 .home1-industries-section .industries-banner-area .banner-content .primary-btn1 {
-  background-color: var(--dark-black-color);
+  background-color: var(--btn-plure);
   color: var(--white-color);
 }
 .home1-industries-section .industries-banner-area .banner-content .primary-btn1 svg {
@@ -15572,7 +15647,7 @@ header.style-7 .primary-btn3.four svg {
   }
 }
 .home2-banner-section .banner-content .email-area .form-inner .primary-btn2::after {
-  background-color: var(--dark-black-color);
+  background-color: var(--white-color);
 }
 .home2-banner-section .banner-content .email-area .form-inner .primary-btn2:hover {
   color: var(--white-color);
@@ -15753,14 +15828,19 @@ header.style-7 .primary-btn3.four svg {
 .feature-card2 .feature-img img {
   border-radius: 10px;
 }
-
+.home2-feature-section {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%), url(../img/home/feature-list.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding:70px 0;
+}
 .home2-feature-section .feature-contact-banner {
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%), url(../img/home2/feature-contact-bg.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 140px 70px 65px;
-  border-radius: 20px;
-  position: relative;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%), url(../img/home2/feature-contact-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 140px 70px 65px;
+    border-radius: 20px;
+    position: relative;
 }
 @media (max-width: 1199px) {
   .home2-feature-section .feature-contact-banner {
@@ -15827,7 +15907,7 @@ header.style-7 .primary-btn3.four svg {
   color: var(--dark-title-color);
 }
 .home2-feature-section .feature-contact-banner .banner-content .primary-btn2 svg {
-  stroke: var(--dark-title-color);
+  stroke: var(--white-color);
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .home2-feature-section .feature-contact-banner .banner-content .primary-btn2 {
@@ -15836,7 +15916,8 @@ header.style-7 .primary-btn3.four svg {
   }
 }
 .home2-feature-section .feature-contact-banner .banner-content .primary-btn2::after {
-  background-color: var(--primary-color2);
+  background-color: var(--white-color);
+  color:black !important;
 }
 .home2-feature-section .feature-contact-banner .banner-img {
   position: absolute;
@@ -16358,19 +16439,26 @@ header.style-7 .primary-btn3.four svg {
 /*=====================================
   19. Home2 Transaction Section CSS
 ========================================*/
+.home2-transaction-section{
+    background-image:url(../img/home/bg-2.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+    position:relative;
+    z-index:0;
+}
 .home2-transaction-section .transaction-tool-wrapper .transaction-tool-list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .home2-transaction-section .transaction-tool-wrapper .transaction-tool-list .single-tool {
   width: 100px;
   height: 100px;
-  background-color: #F8F8F8;
+  background-color: var(--btn-plure);
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -16434,7 +16522,7 @@ header.style-7 .primary-btn3.four svg {
   opacity: 1;
 }
 .home2-transaction-section .transaction-tool-wrapper .transaction-tool-list .single-tool.two {
-  background-color: transparent;
+  background-color: var(--orange);
   border: 1px solid var(--borders-color);
 }
 .home2-transaction-section .transaction-tool-wrapper .logo-and-vector {
@@ -16459,7 +16547,7 @@ header.style-7 .primary-btn3.four svg {
 .home2-transaction-section .transaction-tool-wrapper .logo-and-vector .company-logo-wrap .company-logo {
   width: 80px;
   height: 80px;
-  background-color: #003C30;
+  background-color: var(--primary-color);
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -16530,7 +16618,7 @@ header.style-7 .primary-btn3.four svg {
   }
 }
 .home2-process-section .process-wrapper {
-  background-image: url(../img/home2/home2-process-bg.png), linear-gradient(180deg, rgba(255, 255, 255, 0) 58.31%, #78EB54 100%);
+  background-image: url(../img/home2/home2-process-bg.png), linear-gradient(180deg, rgba(255, 255, 255, 0) 58.31%, var(--primary-color) 100%);
   background-color: var(--white-color);
   background-size: cover;
   background-repeat: no-repeat;
@@ -16598,7 +16686,7 @@ header.style-7 .primary-btn3.four svg {
   align-items: center;
   gap: 5px;
   padding: 6px 8px;
-  background-color: #3C3A3C;
+  background-color: var(--btn-plure);
   border-radius: 18px;
   margin-bottom: 25px;
 }
@@ -16624,7 +16712,7 @@ header.style-7 .primary-btn3.four svg {
   border-radius: 7px;
 }
 .home2-process-section .process-wrapper .single-process .step-no strong {
-  color: var(--primary-color2);
+  color: var(--white-color);
   font-family: var(--font-lora);
   font-size: 18px;
   font-weight: 700;
@@ -19914,11 +20002,33 @@ header.style-7 .primary-btn3.four svg {
   33. Home4 Banner Section CSS
 ========================================*/
 .home4-banner-section {
-  background-image: url(../img/home4/home4-banner-bg.png), linear-gradient(180deg, #F0F0F0 0%, #F0F0F0 100%);
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 208px 0 140px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0;
+    min-height: 520px;
+    background-image: url(../img/home/Background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+    .home4-banner-section::before {
+        content: "";
+        position: absolute;
+        inset: -30%;
+        filter: blur(0.2px);
+        opacity: .35;
+        transform: rotate(-8deg);
+        pointer-events: none;
+    }
+
+    .home4-banner-section::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        opacity: .25;
+        mix-blend-mode: overlay;
+        pointer-events: none;
+    }
 @media (min-width: 1400px) and (max-width: 1599px) {
   .home4-banner-section {
     padding: 160px 0 110px;
@@ -19976,7 +20086,7 @@ header.style-7 .primary-btn3.four svg {
   margin-bottom: 15px;
 }
 .home4-banner-section .partner-area h5 {
-  color: var(--title-color);
+  color: var(--white-color);
   font-family: var(--font-suse);
   font-size: 22px;
   font-weight: 600;
@@ -19994,7 +20104,7 @@ header.style-7 .primary-btn3.four svg {
   }
 }
 .home4-banner-section .partner-area span {
-  color: var(--title-color);
+  color: var(--white-color);
   font-family: var(--font-dmsans);
   font-size: 16px;
   font-weight: 500;
@@ -20013,7 +20123,7 @@ header.style-7 .primary-btn3.four svg {
   }
 }
 .home4-banner-section .partner-area svg {
-  fill: var(--title-color);
+  fill: var(--white-color);
   display: block;
 }
 @media (max-width: 1399px) {
@@ -20090,7 +20200,7 @@ header.style-7 .primary-btn3.four svg {
   left: -4px;
 }
 .home4-banner-section .banner-content-wrap h1 {
-  color: var(--title-color);
+  color: var(--white-color);
   font-family: var(--font-suse);
   font-size: 70px;
   font-weight: 600;
@@ -20124,7 +20234,7 @@ header.style-7 .primary-btn3.four svg {
   }
 }
 .home4-banner-section .banner-content-wrap p {
-  color: var(--text-color);
+  color: var(--white-color);
   font-family: var(--font-dmsans);
   font-size: 18px;
   font-weight: 500;
@@ -20157,7 +20267,7 @@ header.style-7 .primary-btn3.four svg {
   }
 }
 .home4-banner-section .banner-content-wrap p span {
-  color: var(--title-color);
+  color: var(--white-color);
   font-weight: 600;
 }
 .home4-banner-section .banner-content-wrap .btn-and-counter-area {
@@ -20246,7 +20356,7 @@ header.style-7 .primary-btn3.four svg {
   margin-bottom: 8px;
 }
 .home4-banner-section .banner-content-wrap .btn-and-counter-area .counter-area .content .number h3, .home4-banner-section .banner-content-wrap .btn-and-counter-area .counter-area .content .number span {
-  color: var(--title-color);
+  color: var(--white-color);
   font-family: var(--font-suse);
   font-size: 28px;
   font-weight: 700;
@@ -20254,7 +20364,7 @@ header.style-7 .primary-btn3.four svg {
   margin-bottom: 0;
 }
 .home4-banner-section .banner-content-wrap .btn-and-counter-area .counter-area .content p {
-  color: var(--title-color);
+  color: var(--white-color);
   font-family: var(--font-suse);
   font-size: 18px;
   font-weight: 600;
@@ -20335,18 +20445,85 @@ header.style-7 .primary-btn3.four svg {
   max-width: 102px;
   width: 100%;
 }
-.animated-svg .blinking-svg .circle {
-  display: block;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background-color: var(--black-color);
-  border-radius: 50%;
-  transition-duration: 0.8s;
-  transition-property: transform;
-}
-.animated-svg .blinking-svg .circle:nth-child(1), .animated-svg .blinking-svg .circle:nth-child(4), .animated-svg .blinking-svg .circle:nth-child(7), .animated-svg .blinking-svg .circle:nth-child(13) {
+    .animated-svg .blinking-svg .circle {
+        display: block;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background-color: #5259FF;
+        border-radius: 50%;
+        transition-duration: 0.8s;
+        transition-property: transform;
+    }
+        .animated-svg .blinking-svg .circle:nth-child(1) {
+            background-color: #fe8f58;
+        }
+
+        .animated-svg .blinking-svg .circle:nth-child(2) {
+            background-color: #fe6a4d;
+        }
+
+        .animated-svg .blinking-svg .circle:nth-child(3) {
+            background-color: #34c6f6;
+        }
+
+        .animated-svg .blinking-svg .circle:nth-child(4) {
+            background-color: #3e7eff;
+        }
+
+        .animated-svg .blinking-svg .circle:nth-child(5) {
+            background-color: #4f68ff;
+        }
+
+        .animated-svg .blinking-svg .circle:nth-child(6) {
+            background-color: #fe8f58;
+        }
+
+        .animated-svg .blinking-svg .circle:nth-child(7) {
+            background-color: #fe6a4d;
+        }
+
+        .animated-svg .blinking-svg .circle:nth-child(8) {
+            background-color: #34c6f6;
+        }
+
+        .animated-svg .blinking-svg .circle:nth-child(9) {
+            background-color: #3e7eff;
+        }
+
+        .animated-svg .blinking-svg .circle:nth-child(10) {
+            background-color: #4f68ff;
+        }
+
+        .animated-svg .blinking-svg .circle:nth-child(11) {
+            background-color: #fe8f58;
+        }
+
+        .animated-svg .blinking-svg .circle:nth-child(12) {
+            background-color: #fe6a4d;
+        }
+
+        .animated-svg .blinking-svg .circle:nth-child(13) {
+            background-color: #34c6f6;
+        }
+
+        .animated-svg .blinking-svg .circle:nth-child(14) {
+            background-color: #3e7eff;
+        }
+
+        .animated-svg .blinking-svg .circle:nth-child(15) {
+            background-color: #4f68ff;
+        }
+
+.animated-svg .blinking-svg .circle:nth-child(1), 
+.animated-svg .blinking-svg .circle:nth-child(5),
+.animated-svg .blinking-svg .circle:nth-child(7),
+.animated-svg .blinking-svg .circle:nth-child(9),
+.animated-svg .blinking-svg .circle:nth-child(10),
+.animated-svg .blinking-svg .circle:nth-child(13),
+.animated-svg .blinking-svg .circle:nth-child(15) {
   opacity: 0;
+
 }
 .animated-svg .blinking-svg .circle.hide {
   transform: scale(0);
@@ -20677,12 +20854,17 @@ header.style-7 .primary-btn3.four svg {
 /*=====================================
   37. Home4 Service Section CSS
 ========================================*/
+.home4-service-section {
+    background-image: url(../img/home/bg-5.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 .home4-service-section .result-area {
-  max-width: 200px;
-  width: 100%;
+    max-width: 200px;
+    width: 100%;
 }
 .home4-service-section .result-area span {
-  color: var(--title-color);
+  color: var(--white-color);
   font-family: var(--font-suse);
   font-size: 22px;
   font-weight: 700;
@@ -20691,7 +20873,7 @@ header.style-7 .primary-btn3.four svg {
   margin-bottom: 12px;
 }
 .home4-service-section .result-area p {
-  color: var(--text-color);
+  color: var(--white-color);
   font-family: var(--font-suse);
   font-size: 18px;
   font-weight: 600;
@@ -20699,12 +20881,12 @@ header.style-7 .primary-btn3.four svg {
   margin-bottom: 0;
 }
 .home4-service-section .result-area svg {
-  fill: var(--title-color);
+  fill: var(--white-color);
 }
 
 .service-card3 {
   padding: 40px 45px;
-  background-color: #F0F0F0;
+  background-color: var(--orange);
   position: relative;
 }
 @media (max-width: 1399px) {
@@ -20728,10 +20910,10 @@ header.style-7 .primary-btn3.four svg {
   }
 }
 .service-card3 .shape {
-  position: absolute;
-  bottom: 0;
-  right: 20px;
-  fill: var(--white-color);
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    fill: #FEBC68;
 }
 @media (max-width: 576px) {
   .service-card3 .shape {
@@ -20772,6 +20954,8 @@ header.style-7 .primary-btn3.four svg {
   margin: 0;
   list-style: none;
   margin-bottom: 65px;
+  z-index:555;
+  position:relative;
 }
 @media (max-width: 1199px) {
   .service-card3 ul {
@@ -20813,13 +20997,13 @@ header.style-7 .primary-btn3.four svg {
   stroke: var(--dark-white-color);
 }
 .service-card3.two {
-  background-color: #E7E6C7;
+    background-color: #19C1FF;
 }
 .service-card3.three {
-  background-color: #DCE5DA;
+    background-color: #19C1FF;
 }
 .service-card3.four {
-  background-color: #F3DFEB;
+    background-color: #19C1FF;
 }
 
 /*=====================================
@@ -23153,16 +23337,19 @@ header.style-7 .primary-btn3.four svg {
 /*=====================================
   46. Home5 Service Section CSS
 ========================================*/
+.home5-service-section{
+    background-color:var(--orange);
+}
 .home5-service-section .view-btn {
-  color: var(--title-color);
-  font-family: var(--font-dmsans);
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  transition: 0.5s;
+    color: var(--title-color);
+    font-family: var(--font-dmsans);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.5s;
 }
 .home5-service-section .view-btn svg {
   fill: none;
@@ -23174,7 +23361,7 @@ header.style-7 .primary-btn3.four svg {
 }
 .home5-service-section .service-wrapper .single-service {
   padding: 65px 70px;
-  background-color: #D2E8D9;
+  background-color: var(--btn-plure);
   position: relative;
   z-index: 1;
   position: sticky;
@@ -23202,7 +23389,7 @@ header.style-7 .primary-btn3.four svg {
 }
 .home5-service-section .service-wrapper .single-service .vector {
   fill: none;
-  stroke: var(--white-color);
+  stroke: var(--orange);
   position: absolute;
   top: 0;
   right: 0;
@@ -23214,7 +23401,7 @@ header.style-7 .primary-btn3.four svg {
   }
 }
 .home5-service-section .service-wrapper .single-service .service-content h2 {
-  color: var(--title-color);
+  color: var(--white-color);
   font-family: var(--font-suse);
   font-size: 35px;
   font-weight: 700;
@@ -23266,7 +23453,7 @@ header.style-7 .primary-btn3.four svg {
   }
 }
 .home5-service-section .service-wrapper .single-service .service-content ul li {
-  color: var(--title-color);
+  color: var(--white-color);
   font-family: var(--font-dmsans);
   font-size: 18px;
   font-weight: 600;
@@ -23277,7 +23464,7 @@ header.style-7 .primary-btn3.four svg {
   margin-bottom: 20px;
 }
 .home5-service-section .service-wrapper .single-service .service-content ul li svg {
-  fill: var(--title-color2);
+  fill: var(--white-color);
   min-width: 20px;
 }
 @media (max-width: 576px) {
@@ -23304,7 +23491,7 @@ header.style-7 .primary-btn3.four svg {
   margin-left: auto;
 }
 .home5-service-section .service-wrapper .single-service:nth-child(2) {
-  background-color: #EAEAEA;
+  background-color: var(--primary-color);
   top: 200px;
 }
 .home5-service-section .service-wrapper .single-service:nth-child(2) .vector {
@@ -23325,7 +23512,7 @@ header.style-7 .primary-btn3.four svg {
   }
 }
 .home5-service-section .service-wrapper .single-service:nth-child(3) {
-  background-color: #E2E1FF;
+  background-color: var(--btn-plure);
   top: 320px;
 }
 .home5-service-section .service-wrapper .single-service:nth-child(3) .service-img {
@@ -23341,7 +23528,7 @@ header.style-7 .primary-btn3.four svg {
   }
 }
 .home5-service-section .service-wrapper .single-service:nth-child(4) {
-  background-color: #F2F1CE;
+  background-color: var(--primary-color);
   top: 500px;
 }
 .home5-service-section .service-wrapper .single-service:nth-child(4) .vector {
@@ -23526,10 +23713,11 @@ header.style-7 .primary-btn3.four svg {
   48. Home5 Process Section CSS
 ========================================*/
 .home5-process-section {
-  background-image: url(../img/home5/home5-process-bg.png), linear-gradient(180deg, #F0F0FF 0%, #F0F0FF 100%);
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 110px 0;
+    /*background-image: url(../img/home5/home5-process-bg.png), linear-gradient(180deg, #F0F0FF 0%, #F0F0FF 100%);*/
+    background-image: url(../img/home/bg-4.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 110px 0;
 }
 @media (max-width: 1199px) {
   .home5-process-section {
@@ -23546,7 +23734,7 @@ header.style-7 .primary-btn3.four svg {
   width: 100%;
 }
 .home5-process-section .result-area span {
-  color: var(--title-color);
+  color: var(--white-color);
   font-family: var(--font-suse);
   font-size: 22px;
   font-weight: 700;
@@ -23555,7 +23743,7 @@ header.style-7 .primary-btn3.four svg {
   margin-bottom: 12px;
 }
 .home5-process-section .result-area p {
-  color: var(--text-color);
+  color: var(--white-color);
   font-family: var(--font-suse);
   font-size: 18px;
   font-weight: 600;
@@ -23563,7 +23751,7 @@ header.style-7 .primary-btn3.four svg {
   margin-bottom: 0;
 }
 .home5-process-section .result-area svg {
-  fill: var(--title-color);
+  fill: var(--white-color);
 }
 .home5-process-section .process-wrapper {
   padding-top: 95px;
@@ -23601,9 +23789,9 @@ header.style-7 .primary-btn3.four svg {
     display: none;
   }
 }
-.home5-process-section .process-wrapper .process-connection-wrap svg {
+/*.home5-process-section .process-wrapper .process-connection-wrap svg {
   fill: #C6C6E3;
-}
+}*/
 @media (max-width: 1399px) {
   .home5-process-section .process-wrapper .process-connection-wrap svg {
     width: 320px;
@@ -23615,17 +23803,17 @@ header.style-7 .primary-btn3.four svg {
   }
 }
 .home5-process-section .process-wrapper .process-connection-wrap .icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background-color: var(--primary-color4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: -28px;
-  left: 50%;
-  transform: translateX(-50%);
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: #19C1FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -28px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .home5-process-section .process-wrapper .process-connection-wrap .icon {
@@ -23669,7 +23857,7 @@ header.style-7 .primary-btn3.four svg {
 }
 .home5-process-section .process-card3 .step-no {
   padding: 7px 9px;
-  background-color: var(--secondary-color);
+  background-color: var(--btn-plure);
   display: inline-flex;
   align-items: center;
   gap: 5px;
@@ -23701,7 +23889,7 @@ header.style-7 .primary-btn3.four svg {
   line-height: 1;
 }
 .home5-process-section .process-card3 h5 {
-  color: var(--title-color);
+  color: var(--white-color);
   font-family: var(--font-suse);
   font-size: 22px;
   font-weight: 600;
@@ -23720,7 +23908,7 @@ header.style-7 .primary-btn3.four svg {
   }
 }
 .home5-process-section .process-card3 p {
-  color: var(--text-color);
+  color: var(--white-color);
   font-family: var(--font-dmsans);
   font-size: 16px;
   font-weight: 500;
@@ -23728,16 +23916,16 @@ header.style-7 .primary-btn3.four svg {
   margin-bottom: 0;
 }
 .home5-process-section .process-card3 p strong {
-  color: var(--title-color);
+  color: var(--orange);
   font-weight: 600;
 }
 .home5-process-section .contact-area {
   max-width: 736px;
   width: 100%;
   margin: 0 auto;
-  background-color: var(--white-color);
-  padding: 10px 30px;
-  border-radius: 26px;
+  background-color: var(--orange);
+  padding:30px;
+  border-radius: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -23758,7 +23946,7 @@ header.style-7 .primary-btn3.four svg {
   }
 }
 .home5-process-section .contact-area p {
-  color: var(--text-color);
+  color: var(--white-color);
   font-family: var(--font-suse);
   font-size: 16px;
   font-weight: 500;
@@ -23766,7 +23954,7 @@ header.style-7 .primary-btn3.four svg {
   margin-bottom: 0;
 }
 .home5-process-section .contact-area a {
-  color: var(--title-color);
+  color: var(--white-color);
   font-family: var(--font-dmsans);
   font-size: 15px;
   font-weight: 700;
@@ -23777,7 +23965,7 @@ header.style-7 .primary-btn3.four svg {
 }
 .home5-process-section .contact-area a svg {
   fill: none;
-  stroke: var(--title-color);
+  stroke: var(--white-color);
   transition: 0.5s;
 }
 .home5-process-section .contact-area a:hover svg {
@@ -25918,10 +26106,11 @@ header.style-7 .primary-btn3.four svg {
   60. Home6 Process Section CSS
 ========================================*/
 .home6-process-section {
-  background-image: url(../img/home6/home6-process-bg.png), linear-gradient(180deg, #FFEFB4 0%, #FFEFB4 100%);
+    /*  background-image: url(../img/home6/home6-process-bg.png), linear-gradient(180deg, #FFEFB4 0%, #FFEFB4 100%);
   background-size: cover;
-  background-repeat: no-repeat;
-  padding: 100px 0 110px;
+  background-repeat: no-repeat;*/
+    background-color: #02072a;
+    padding: 100px 0 110px;
 }
 @media (max-width: 1199px) {
   .home6-process-section {
@@ -25949,7 +26138,7 @@ header.style-7 .primary-btn3.four svg {
   }
 }
 .home6-process-section .result-area span {
-  color: var(--title-color);
+  color: var(--white-color);
   font-family: var(--font-lora);
   font-size: 22px;
   font-weight: 700;
@@ -25958,7 +26147,7 @@ header.style-7 .primary-btn3.four svg {
   margin-bottom: 12px;
 }
 .home6-process-section .result-area p {
-  color: var(--text-color);
+  color: var(--white-color);
   font-family: var(--font-dmsans);
   font-size: 18px;
   font-weight: 600;
@@ -25966,11 +26155,11 @@ header.style-7 .primary-btn3.four svg {
   margin-bottom: 0;
 }
 .home6-process-section .result-area svg {
-  fill: var(--title-color);
+  fill: var(--white-color);
 }
 .home6-process-section .process-wrapper .process-list {
   padding: 0;
-  margin: 0;
+  margin: 0 0 110px 0;
   list-style: none;
   padding-top: 40px;
   display: flex;
@@ -26004,15 +26193,17 @@ header.style-7 .primary-btn3.four svg {
   }
 }
 .home6-process-section .process-wrapper .process-list::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 40px;
-  width: 426px;
-  height: 466px;
-  border-radius: 14px;
-  border: 1px dashed var(--black-color);
-  z-index: -1;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 40px;
+    width: 426px;
+    height: 466px;
+    border-radius: 14px;
+    border: 2px solid;
+    border-image: linear-gradient(90deg, #fe8f58, #fe6a4d, #34c6f6, #3e7eff, #4f68ff);
+    border-image-slice: 1;
+    z-index: -1;
 }
 @media (min-width: 1200px) and (max-width: 1399px) {
   .home6-process-section .process-wrapper .process-list::before {
@@ -26069,7 +26260,7 @@ header.style-7 .primary-btn3.four svg {
 }
 .home6-process-section .process-wrapper .process-list .single-process .step-no {
   padding: 7px 9px;
-  background-color: var(--black-color);
+  background-color: var(--btn-plure);
   display: inline-flex;
   align-items: center;
   gap: 5px;
@@ -26101,7 +26292,7 @@ header.style-7 .primary-btn3.four svg {
   line-height: 1;
 }
 .home6-process-section .process-wrapper .process-list .single-process .content h5 {
-  color: var(--title-color);
+  color: var(--white-color);
   font-family: var(--font-lora);
   font-size: 22px;
   font-weight: 700;
@@ -26114,7 +26305,7 @@ header.style-7 .primary-btn3.four svg {
   }
 }
 .home6-process-section .process-wrapper .process-list .single-process .content p {
-  color: var(--text-color);
+  color: var(--white-color);
   font-family: var(--font-dmsans);
   font-size: 16px;
   font-weight: 500;
@@ -26127,13 +26318,13 @@ header.style-7 .primary-btn3.four svg {
   }
 }
 .home6-process-section .process-wrapper .process-list .single-process .content p span {
-  color: var(--title-color);
+  color: var(--white-color);
   font-weight: 600;
 }
 .home6-process-section .process-wrapper .process-btn-area {
-  padding: 10px 30px;
-  background-color: #F8F8F8;
-  border-radius: 26px;
+  padding:  30px;
+  background-color: var(--orange);
+  border-radius: 50px;
   margin-top: 80px;
   display: flex;
   align-items: center;
@@ -26155,7 +26346,7 @@ header.style-7 .primary-btn3.four svg {
   }
 }
 .home6-process-section .process-wrapper .process-btn-area p {
-  color: var(--text-color);
+  color: var(--white-color);
   font-family: var(--font-lora);
   font-size: 16px;
   font-weight: 600;
@@ -26168,7 +26359,7 @@ header.style-7 .primary-btn3.four svg {
   }
 }
 .home6-process-section .process-wrapper .process-btn-area a {
-  color: var(--title-color);
+  color: var(--white-color);
   font-family: var(--font-dmsans);
   font-size: 15px;
   font-weight: 700;
@@ -26181,14 +26372,14 @@ header.style-7 .primary-btn3.four svg {
 }
 .home6-process-section .process-wrapper .process-btn-area a svg {
   fill: none;
-  stroke: var(--title-color);
+  stroke: var(--white-color);
   transition: 0.5s;
 }
 .home6-process-section .process-wrapper .process-btn-area a:hover {
-  color: var(--primary-color3);
+  color: var(--btn-plure);
 }
 .home6-process-section .process-wrapper .process-btn-area a:hover svg {
-  stroke: var(--primary-color3);
+  stroke: var(--btn-plure);
   transform:scale(-1);
 }
 
@@ -37255,7 +37446,7 @@ body.dark .home5-service-section .service-wrapper .single-service {
   background-color: #1C1A1E;
 }
 body.dark .home5-service-section .service-wrapper .single-service .vector {
-  stroke: #2f2f2f;
+  stroke: var(--orange);
 }
 body.dark .home5-process-section {
   background-image: url(../img/home5/home5-process-bg-light.png), linear-gradient(180deg, #1C1A1E 0%, #1C1A1E 100%);
