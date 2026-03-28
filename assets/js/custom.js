@@ -77,7 +77,7 @@
 
 
 	//Counter up
-	$('.counter').counterUp({
+	$('#counter').counterUp({
 		delay: 10,
 		time: 1000
 	});
@@ -827,74 +827,85 @@
 
 
 	gsap.registerPlugin(ScrollTrigger);
-	let mm = gsap.matchMedia();
-	gsap.to(".home3-video-wrapper .video-area", {
-		y: 420, // Move 500px down
-		width: "97vw",  // Expand to full window width
-		height: "80vh", // Ensure it also takes full height
-		right: "auto",      // Set right to 0 to make sure the expansion happens from the right side
-		x: 120,
-		ease: "power2.out",
-		scrollTrigger: {
-			trigger: ".home3-video-wrapper",
-			start: "top 25%",  // Trigger when the top of the video-wrapper reaches 30% of the viewport
-			end: "bottom top", // Animation ends when the video-wrapper leaves the viewport
-			scrub: 3,  // Smooth transition
-			// markers: true // Optional, for debugging purposes
-		}
-	});
-	// Adjust x value for screens ≤ 1700px without overwriting the animation
-	mm.add("(max-width: 1700px)", () => {
-		gsap.to(".home3-video-wrapper .video-area", {
-			x: 70, // Update x only for screens ≤ 1700px
+
+	const wrapper = document.querySelector(".home3-video-wrapper");
+	const video = document.querySelector(".home3-video-wrapper .video-area");
+
+	if (wrapper && video) {
+
+		let mm = gsap.matchMedia();
+
+		gsap.to(video, {
+			y: 420,
+			width: "97vw",
+			height: "80vh",
+			right: "auto",
+			x: 120,
+			ease: "power2.out",
 			scrollTrigger: {
-				trigger: ".home3-video-wrapper",
+				trigger: wrapper,
 				start: "top 25%",
 				end: "bottom top",
-				scrub: 3,
+				scrub: 3
 			}
 		});
-  	});
-	mm.add("(max-width: 1600px)", () => {
-		gsap.to(".home3-video-wrapper .video-area", {
-			y: 500,
-			x: 25, 
-			width: "95vw", 
-			scrollTrigger: {
-				trigger: ".home3-video-wrapper",
-				start: "top 25%",
-				end: "bottom top",
-				scrub: 3,
-			}
+
+		mm.add("(max-width: 1700px)", () => {
+			gsap.to(video, {
+				x: 70,
+				scrollTrigger: {
+					trigger: wrapper,
+					start: "top 25%",
+					end: "bottom top",
+					scrub: 3
+				}
+			});
 		});
-  	});
-	mm.add("(max-width: 1470px)", () => {
-		gsap.to(".home3-video-wrapper .video-area", {
-			y: 500,
-			x: 20, 
-			width: "95vw", 
-			scrollTrigger: {
-				trigger: ".home3-video-wrapper",
-				start: "top 25%",
-				end: "bottom top",
-				scrub: 3,
-			}
+
+		mm.add("(max-width: 1600px)", () => {
+			gsap.to(video, {
+				y: 500,
+				x: 25,
+				width: "95vw",
+				scrollTrigger: {
+					trigger: wrapper,
+					start: "top 25%",
+					end: "bottom top",
+					scrub: 3
+				}
+			});
 		});
-  	});
-	mm.add("(max-width: 1199px)", () => {
-		gsap.to(".home3-video-wrapper .video-area", {
-			y: 500,
-			x: 12, 
-			width: "95vw", 
-			height: "70vh",
-			scrollTrigger: {
-				trigger: ".home3-video-wrapper",
-				start: "top 25%",
-				end: "bottom top",
-				scrub: 3,
-			}
+
+		mm.add("(max-width: 1470px)", () => {
+			gsap.to(video, {
+				y: 500,
+				x: 20,
+				width: "95vw",
+				scrollTrigger: {
+					trigger: wrapper,
+					start: "top 25%",
+					end: "bottom top",
+					scrub: 3
+				}
+			});
 		});
-  	});
+
+		mm.add("(max-width: 1199px)", () => {
+			gsap.to(video, {
+				y: 500,
+				x: 12,
+				width: "95vw",
+				height: "70vh",
+				scrollTrigger: {
+					trigger: wrapper,
+					start: "top 25%",
+					end: "bottom top",
+					scrub: 3
+				}
+			});
+		});
+
+	}
 
 	$(window).scroll(function() {
 		if ($(window).width() <= 767) { // Adjust the breakpoint as needed (576px is Bootstrap's sm breakpoint)
@@ -1503,20 +1514,20 @@
 	});
 
 	// Dark Light
-	const dayNight = document.querySelector(".tt-style-switch");
+	//const dayNight = document.querySelector(".tt-style-switch");
 
-	const toggleDarkMode = () => {
-	const body = document.body;
-	const icon = dayNight.querySelector("i");
-	body.classList.toggle("dark");
+	//const toggleDarkMode = () => {
+	//const body = document.body;
+	//const icon = dayNight.querySelector("i");
+	//body.classList.toggle("dark");
 	
-	icon.classList.toggle("bi-brightness-low-fill", body.classList.contains("dark"));
-	icon.classList.toggle("bi-moon", !body.classList.contains("dark"));
+	//icon.classList.toggle("bi-brightness-low-fill", body.classList.contains("dark"));
+	//icon.classList.toggle("bi-moon", !body.classList.contains("dark"));
 
-	localStorage.setItem("mortar_theme", body.classList.contains("dark") ? "dark" : "");
-	};
+	//localStorage.setItem("mortar_theme", body.classList.contains("dark") ? "dark" : "");
+	//};
 
-	dayNight.addEventListener("click", toggleDarkMode);
+	//dayNight.addEventListener("click", toggleDarkMode);
 
 	window.addEventListener("load", () => {
 	const savedTheme = localStorage.getItem("mortar_theme");
