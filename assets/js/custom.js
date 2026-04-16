@@ -1,4 +1,4 @@
-(function ($) {
+﻿(function ($) {
 	"use strict";
 
 	$('.sidebar-button').on("click", function () {
@@ -954,74 +954,100 @@
 		});
 	}
 
-	$(function () {
-		function initializeThrowable() {
-			$("#feature-wrap .throwable-item").each(function () {
-				var xPos = Math.random() * 50;
-				var yPos = Math.random() * 50;
-				$(this).css({
-					position: "absolute",
-					left: xPos + "px",
-					top: yPos + "px",
-					cursor: "grab",
-					opacity: 0,
-					transform: "scale(0.5)",
-				});
-			});
-	
-			// Fix for passive event listener issue on mobile
-			$(document).on("touchmove", function (event) {
-				event.preventDefault();
-			}, { passive: false });
-	
-			// Check if the throwable function is available before using it
-			if ($.fn.throwable) {
-				$(".throwable-item").throwable({
-					gravity: { x: 0, y: 3 },
-					damping: 0.9,
-					containment: "parent",
-					collisionDetection: true,
-					bounce: 0.3,
-				});
-			} else {
-				console.warn("Throwable plugin is not loaded.");
-			}
-		}
-	
-		// Intersection Observer to trigger animation when visible
-		let observer = new IntersectionObserver(
-			function (entries) {
-				entries.forEach((entry) => {
-					let target = $(entry.target);
-					if (entry.isIntersecting) {
-						// Reset position randomly before animation
-						target.css({
-							opacity: 0,
-							transform: "scale(0.5)",
-						});
-	
-						// Animate when in viewport
-						target.animate({ opacity: 1, transform: "scale(1)" }, 500, function () {
-							initializeThrowable(); // Reinitialize throwable
-						});
-					} else {
-						// Reset when leaving viewport
-						target.css({
-							opacity: 0,
-							transform: "scale(0.5)",
-						});
-					}
-				});
-			},
-			{ threshold: 0.2 }
-		);
-	
-		$(".throwable-item").each(function () {
-			observer.observe(this);
-		});
-	});
-	
 
+
+	/**/
+$(function () {
+
+    const container = "#feature-wrap";
+    const items = "#feature-wrap .throwable-item";
+
+    // 1) توزيع عشوائي + تجهيز أولي
+    function init() {
+        $(items).each(function () {
+
+            let x = Math.random() * 300;
+            let y = Math.random() * 200;
+
+            gsap.set(this, {
+                x: x,
+                y: y,
+                scale: 0.3,
+                opacity: 0,
+                position: "absolute",
+                cursor: "grab"
+            });
+
+        });
+    }
+
+    // 2) أنيميشن دخول جميل
+    function animateIn(el, delay = 0) {
+        gsap.to(el, {
+            opacity: 1,
+            scale: 1,
+            duration: 0.8,
+            delay: delay,
+            ease: "back.out(1.7)"
+        });
+    }
+
+    // 3) Drag (بديل throwable plugin)
+    function enableDrag() {
+        Draggable.create(items, {
+            type: "x,y",
+            bounds: container,
+            edgeResistance: 0.6,
+            inertia: false,
+
+            onPress: function () {
+                gsap.to(this.target, {
+                    scale: 1.15,
+                    duration: 0.2
+                });
+            },
+
+            onRelease: function () {
+                gsap.to(this.target, {
+                    scale: 1,
+                    duration: 0.3
+                });
+            }
+        });
+    }
+
+    // 4) Observer (تشغيل عند الظهور)
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                $(items).each(function (i) {
+                    animateIn(this, i * 0.05); // stagger effect
+                });
+
+                enableDrag(); // شغل السحب مرة واحدة
+            } else {
+                gsap.set(items, {
+                    opacity: 0,
+                    scale: 0.3
+                });
+            }
+
+        });
+
+    }, { threshold: 0.2 });
+
+    // 5) تشغيل
+    init();
+
+    document.querySelectorAll(items).forEach(el => {
+        observer.observe(el);
+    });
+
+});
+	/**/
 	$(".award-table tbody tr").on("mouseenter", function (e) {
 		// // Get the index of the hovered content list item
 		var index = $(this).index();
@@ -1451,21 +1477,7 @@
 
 	gsap.registerPlugin(ScrollTrigger);
 
-	let drawLine = gsap.timeline();
-  
-	ScrollTrigger.create({
-	  trigger: "#about-section",
-	  animation: drawLine,
-	  start: "-5% 0",
-	  end: "120% 100%",
-	  scrub: 4,
-	});
-	drawLine.fromTo(
-	  "#route-1",
-	  { drawSVG: "0%" },
-	  { duration: 6, drawSVG: "100%" }
-	);
-
+	
 	// Back To Top
 	jQuery(function($) {
 		"use strict";
