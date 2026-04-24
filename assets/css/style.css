@@ -165,6 +165,18 @@ body.dark {
     --borders-color: #2F2F2F;
     background-color: #131313;
 }
+@font-face {
+    font-family: 'boxicons';
+    /*    src: url('/front/assets/fonts/boxicons.woff2') format('woff2');*/
+    src: url('/assets/fonts/boxicons.woff2') format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'boxicons';
+    /*    src: url('/front/assets/fonts/boxicons.woff2') format('woff2');*/
+    src: url('/assets/fonts/boxicons.woff') format('woff');
+    font-display: swap;
+}
 
 /*================================================
 02. Mixins Css
@@ -268,7 +280,7 @@ body.marketing-agency #ball .ball-close {
   color: var(--primary-color3);
 }
 body.marketing-agency .progress-wrap svg.progress-circle {
-  stroke: var(--dark-blue);
+  stroke: var(--white-color);
 }
 body.marketing-agency .progress-wrap .arrow {
   fill: var(--white-color);
