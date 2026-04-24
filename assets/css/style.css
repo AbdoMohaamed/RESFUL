@@ -34279,7 +34279,7 @@ html[dir="rtl"]
   color: var(--title-color);
 }
 .team-page-content-banner.style-2 .banner-wrapper {
-  background-color: #F0F0FF;
+  background-color: var(--dark-blue);
   padding: 70px 85px;
   border-radius: 20px;
 }
@@ -34447,7 +34447,7 @@ html[dir="rtl"]
 }
 
 .team-page-gallery-section {
-  background-color: #1C1A1E;
+  background-color: var(--dark-blue);
   padding: 110px 0;
   position: relative;
   z-index: 1;
@@ -34550,12 +34550,13 @@ html[dir="rtl"]
   margin-bottom: 30px;
 }
 .team-join-section .team-join-wrap .section-title.three p {
-  color: var(--title-color);
+  color: var(--white-color);
   font-family: var(--font-suse);
   font-size: 22px;
   line-height: 32px;
   margin-left: 0;
   max-width: unset;
+  opacity:50%;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .team-join-section .team-join-wrap .section-title.three p {
@@ -34568,7 +34569,7 @@ html[dir="rtl"]
   }
 }
 .team-join-section .team-join-wrap svg {
-  fill: var(--borders-color);
+  fill: var(--primary-color);
 }
 @media (max-width: 576px) {
   .team-join-section .team-join-wrap svg {
@@ -34655,7 +34656,7 @@ html[dir="rtl"]
   margin-bottom: 3px;
 }
 .team-card2 .team-content h5 a {
-  color: var(--title-color);
+  color: var(--orange);
   font-family: var(--font-suse);
   font-size: 22px;
   font-weight: 700;
@@ -38207,8 +38208,8 @@ body:not(.is-mobile) .tt-style-switch:hover {
 .team-page-content-banner {
     background-color: var(--blue-3);
 }
-.service-details-page {
-  background-color:var(--blue-3);
+.service-details-page, .team-join-section {
+    background-color: var(--blue-3);
 }
 .case-study-details-page {
     background-color: #080c24;
@@ -38218,8 +38219,8 @@ body:not(.is-mobile) .tt-style-switch:hover {
     background-color: var(--dark-blue);
     padding: 100px 0 66px 0;
 }
-.new-home-services{
-    background-color:var(--btn-plure) !important;
+.new-home-services, .team2-card-section {
+    background-color: var(--btn-plure) !important;
 }
 .career-details-page {
     background-color: var(--dark-blue);
@@ -38233,4 +38234,72 @@ body:not(.is-mobile) .tt-style-switch:hover {
     background-image: url(../img/home3/home3-scroll-text-bg.png), linear-gradient(180deg, var(--blue-3) 0%, var(--blue-3) 100%);
     background-size: cover;
     background-repeat: no-repeat;
+}
+.team2-card-section {
+    background-color: var(--dark-blue) !important;
+}
+.details-page {
+    background-color: #080c24;
+    padding-top:120px !important;
+}
+
+.related-blog {
+    margin-bottom: 15px;
+    border: 1px solid var(--primary-color);
+    border-radius: 12px;
+}
+
+.related-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 12px;
+}
+
+    .related-card:hover {
+        background-color: #f9fafb;
+    }
+
+    .related-card img {
+        width: 80px;
+        height: 65px;
+        object-fit: cover;
+        border-radius: 10px;
+        flex-shrink: 0;
+    }
+
+    .related-card .content {
+        flex: 1;
+    }
+
+    .related-card h4 {
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--white-color);
+        margin: 0;
+        line-height: 1.4;
+        transition: color 0.3s;
+    }
+
+    .related-card:hover h4 {
+        color: var(--primary-color); 
+    }
+
+    .related-card .read-more {
+        display: block;
+        margin-top: 6px;
+        font-size: 16px;
+        font-weight:600;
+        color: var(--primary-color);
+        transition: color 0.3s;
+    }
+
+    .related-card:hover .read-more {
+        color: var(--orange);
+    }
+.details-page .post-thumb.two img {
+    border-radius: 12px !important;
 }
