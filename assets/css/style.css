@@ -17678,31 +17678,9 @@ padding-right:50px;
   24. Home2 Contact Section CSS
 ========================================*/
 .home2-contact-section {
-    background-color:  var(--orange-dark);
     padding: 15px 0 ;
 }
-@media (max-width: 1399px) {
-  .home2-contact-section {
-    border-radius: 120px 120px 0 0;
-  }
-}
-@media (max-width: 1199px) {
-  .home2-contact-section {
-    padding: 365px 0 90px;
-  }
-}
-@media (max-width: 991px) {
-  .home2-contact-section {
-    padding: 315px 0 90px;
-    border-radius: 100px 100px 0 0;
-  }
-}
-@media (max-width: 767px) {
-  .home2-contact-section {
-    padding: 295px 0 70px;
-    border-radius: 80px 80px 0 0;
-  }
-}
+
 .home2-contact-section .section-title {
   margin-bottom: 10px;
 }
@@ -23527,6 +23505,15 @@ padding-right:50px;
   min-width: 302px;
   justify-content: space-between;
 }
+
+@media only screen and (max-width : 768px) {
+    .home5-service-section .service-wrapper .single-service .service-content .primary-btn5{
+        width:100% !important;
+        min-width:none !important;
+
+    }
+}
+
 .home5-service-section .service-wrapper .single-service .service-img {
   -webkit-mask-image: url(../img/home5/service-img-bg1.png);
           mask-image: url(../img/home5/service-img-bg1.png);
